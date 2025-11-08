@@ -130,11 +130,18 @@ func GoWaifu(w Waifu) {
 
 
 func main() {
+
 	s := &Sfw{BaseContent{
 		link:   "https://api.waifu.pics/sfw/pat",
 		w:      []string{},
 		IsDone: false,
 	}}
 
+	f := &Nsfw{BaseContent{
+		link:   "https://api.waifu.pics/nsfw/trap",
+		w:      []string{},
+		IsDone: false,
+	}}
 	GoWaifu(s)
+	GoWaifu(f)
 }
